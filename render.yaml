@@ -1,0 +1,25 @@
+# Render blueprint. In the Render dashboard: New > Blueprint, pick this repo,
+# and it reads this file instead of asking you to fill in a form.
+services:
+  - type: web
+    name: twenty28-ventures
+    runtime: static
+    # Nothing to compile. The repo root is the site.
+    buildCommand: "echo 'No build step: static files are served as-is.'"
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      # Photos are served under stable filenames, so cache for a day rather
+      # than a year. Replacing a headshot then goes live the next day.
+      - path: /assets/*
+        name: Cache-Control
+        value: "public, max-age=86400"
