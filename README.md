@@ -30,16 +30,6 @@ black. They live in the `:root` block at the top of `styles.css`.
 is unaffiliated with Harvard and does not use its marks. Keep it that way. Color alone is not a claim of
 endorsement, but a shield would be.
 
-## Before this goes public
-
-The FAQ answers, terms, and deal criteria carry the real substance from the 2026 fund, rewritten rather than
-copied. The fund name, framing, terms, statistics, and both team members are confirmed. Two things are left.
-
-1. **Team photos.** `people.js` points at `assets/deven-bhattacharya.jpg` and `assets/jaymal-lodha.jpg`. Save
-   the two headshots at exactly those paths. Both are already square, so no cropping is needed. Until the files
-   exist the cards fall back to initials, so nothing looks broken in the meantime.
-2. **Advisory board.** The section shows "Coming soon." Add an advisor only once they have confirmed in
-   writing that they will be listed. Adding any entry to the `advisors` array replaces the message with a grid.
 
 The footer states that the fund is unaffiliated with Harvard, does not use its marks, and that the page is not
 an offer of securities. Have counsel review that language.
