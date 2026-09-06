@@ -1,0 +1,50 @@
+# Twenty28 Ventures — HBS Class of 2028 Fund
+
+A single-page static site for the Class of 2028 class fund, modeled on the structure of the
+Class of 2026 site (hero, opportunity, deal criteria, terms, FAQ, advisory board, team).
+
+No build step and no dependencies. Three files do the work.
+
+| File | What it holds |
+| --- | --- |
+| `index.html` | All page copy and structure |
+| `styles.css` | Design tokens at the top, then sections in page order |
+| `people.js` | The advisory board and team lists |
+| `main.js` | Renders the people grids, scroll reveals, footer year |
+
+## Run it locally
+
+```bash
+python3 -m http.server 8000 --directory /Users/devenbhattacharya/coding_project/hbs-class-2028-fund
+```
+
+Then open `http://localhost:8000`.
+
+## Colors
+
+The palette comes from the HBS site's own CSS custom properties, read directly from hbs.edu:
+crimson `#a41034`, highlight `#e80538`, complementary ground `#f6f4f2`, inverse `#222222`, text at 85/66/55%
+black. They live in the `:root` block at the top of `styles.css`.
+
+**No HBS logo, shield, or wordmark appears anywhere on the site**, and the footer states plainly that the fund
+is unaffiliated with Harvard and does not use its marks. Keep it that way. Color alone is not a claim of
+endorsement, but a shield would be.
+
+## Before this goes public
+
+The FAQ answers, terms, and deal criteria carry the real substance from the 2026 fund, rewritten rather than
+copied. The fund name, framing, terms, statistics, and both team members are confirmed. Two things are left.
+
+1. **Team photos.** `people.js` points at `assets/deven-bhattacharya.jpg` and `assets/jaymal-lodha.jpg`. Save
+   the two headshots at exactly those paths. Both are already square, so no cropping is needed. Until the files
+   exist the cards fall back to initials, so nothing looks broken in the meantime.
+2. **Advisory board.** The section shows "Coming soon." Add an advisor only once they have confirmed in
+   writing that they will be listed. Adding any entry to the `advisors` array replaces the message with a grid.
+
+The footer states that the fund is unaffiliated with Harvard, does not use its marks, and that the page is not
+an offer of securities. Have counsel review that language.
+
+## Deploy
+
+Any static host works. Drag the folder into Netlify, run `vercel` from it, or push it to a GitHub repo and
+turn on Pages. There is nothing to compile.
