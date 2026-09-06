@@ -30,9 +30,24 @@ black. They live in the `:root` block at the top of `styles.css`.
 is unaffiliated with Harvard and does not use its marks. Keep it that way. Color alone is not a claim of
 endorsement, but a shield would be.
 
-
 The footer states that the fund is unaffiliated with Harvard, does not use its marks, and that the page is not
 an offer of securities. Have counsel review that language.
+
+## Link previews
+
+`index.html` carries a full Open Graph and Twitter card block pointing at `assets/share-card.png`
+(1200x630). Without an absolute `og:image`, iMessage and Slack scrape the page and pick the largest image they
+find, which was a team headshot.
+
+`assets/share-card.source.html` generates that card. To change the wording, edit it and re-render:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --hide-scrollbars \
+  --window-size=1200,630 --screenshot=assets/share-card.png assets/share-card.source.html
+```
+
+The absolute URLs are hardcoded to `https://twenty28-ventures.onrender.com/`. Moving to a custom domain means
+updating the canonical link and the five URLs in that block.
 
 ## Deploy
 
