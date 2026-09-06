@@ -7,24 +7,23 @@
 <meta name="description" content="Twenty28 Ventures is a class fund at Harvard Business School. We raise from the Class of 2028 and invest in companies founded by the Class of 2028. No management fees, no carried interest.">
 <link rel="canonical" href="https://twenty28-ventures.onrender.com/">
 
-<!-- Open Graph. The absolute og:image is what stops iMessage, Slack and the rest
-     from scraping the page and picking a team headshot instead. Regenerate the
-     card from assets/share-card.source.html if the wording changes. -->
+<!-- Open Graph. Scrapers use og:image and ignore everything else on the page,
+     so this tag alone decides the link preview. It must be an absolute URL. -->
 <meta property="og:site_name" content="Twenty28 Ventures">
 <meta property="og:title" content="Twenty28 Ventures">
 <meta property="og:description" content="A class fund at Harvard Business School. Raised by the Class of 2028, invested in the Class of 2028.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://twenty28-ventures.onrender.com/">
-<meta property="og:image" content="https://twenty28-ventures.onrender.com/assets/share-card.png">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image" content="https://twenty28-ventures.onrender.com/assets/og-campus.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Twenty28 Ventures: backed by the class, built for the class. A class fund at Harvard Business School.">
+<meta property="og:image:alt" content="The Harvard Business School campus on an autumn afternoon, students seated on the lawn under a plane tree.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Twenty28 Ventures">
 <meta name="twitter:description" content="A class fund at Harvard Business School. Raised by the Class of 2028, invested in the Class of 2028.">
-<meta name="twitter:image" content="https://twenty28-ventures.onrender.com/assets/share-card.png">
+<meta name="twitter:image" content="https://twenty28-ventures.onrender.com/assets/og-campus.jpg">
 <meta name="theme-color" content="#a41034">
 <script>document.documentElement.classList.add("js");</script>
 <link rel="stylesheet" href="styles.css">
@@ -63,6 +62,12 @@
       </div>
     </div>
   </section>
+
+  <!-- ============ campus ============ -->
+  <figure class="campus">
+    <img src="assets/campus.jpg" width="1800" height="691"
+         alt="The Harvard Business School campus on an autumn afternoon, students seated on the lawn under a plane tree.">
+  </figure>
 
   <!-- ============ opportunity ============ -->
   <section class="stats" id="opportunity">

@@ -35,19 +35,15 @@ an offer of securities. Have counsel review that language.
 
 ## Link previews
 
-`index.html` carries a full Open Graph and Twitter card block pointing at `assets/share-card.png`
-(1200x630). Without an absolute `og:image`, iMessage and Slack scrape the page and pick the largest image they
-find, which was a team headshot.
+`index.html` carries a full Open Graph and Twitter card block pointing at `assets/og-campus.jpg` (1200x630).
+That tag alone decides the preview: scrapers read it and ignore every other image on the page. Without it,
+iMessage falls back to scraping the largest image it finds, which was a team headshot.
 
-`assets/share-card.source.html` generates that card. To change the wording, edit it and re-render:
+The URLs are absolute and hardcoded to `https://twenty28-ventures.onrender.com/`. Moving to a custom domain
+means updating the canonical link and the five URLs in that block.
 
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --hide-scrollbars \
-  --window-size=1200,630 --screenshot=assets/share-card.png assets/share-card.source.html
-```
-
-The absolute URLs are hardcoded to `https://twenty28-ventures.onrender.com/`. Moving to a custom domain means
-updating the canonical link and the five URLs in that block.
+Both campus images are crops of the same source photo, `IMG_5218.jpg`: `assets/campus.jpg` for the page band
+and `assets/og-campus.jpg` for sharing. Replacing them means re-cropping to those two shapes.
 
 ## Deploy
 
