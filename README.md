@@ -22,13 +22,15 @@ Then open `http://localhost:8000`.
 
 ## Colors
 
-The palette comes from the HBS site's own CSS custom properties, read directly from hbs.edu:
-crimson `#a41034`, highlight `#e80538`, complementary ground `#f6f4f2`, inverse `#222222`, text at 85/66/55%
-black. They live in the `:root` block at the top of `styles.css`.
+The palette is brand-neutral and borrowed from nobody: accent `#1d3b57` (deep slate blue), a brighter
+`#2e6ea4` and a darker `#132a3e` for hover states, neutral ground `#f4f4f3`, inverse `#222222`, text at
+85/66/55% black. They live in the `:root` block at the top of `styles.css`, as `--accent`, `--accent-bright`,
+and `--accent-deep`. Changing those three values re-skins the site; nothing else in the CSS hardcodes a color.
 
-**No HBS logo, shield, or wordmark appears anywhere on the site**, and the footer states plainly that the fund
-is unaffiliated with Harvard and does not use its marks. Keep it that way. Color alone is not a claim of
-endorsement, but a shield would be.
+The `theme-color` meta tag in `index.html` repeats the accent hex, so change it alongside the tokens.
+
+**No HBS logo, shield, wordmark, or school color appears anywhere on the site**, and the footer states plainly
+that the fund is unaffiliated with Harvard and does not use its marks. Keep it that way.
 
 The footer states that the fund is unaffiliated with Harvard, does not use its marks, and that the page is not
 an offer of securities. Have counsel review that language.
