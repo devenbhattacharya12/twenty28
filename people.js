@@ -14,6 +14,10 @@ window.PEOPLE = {
      Add an advisor only once they have confirmed in writing that they will be listed. */
   advisors: [],
 
+  /* Portfolio companies. Same shape: name, role (one line, e.g. "Fintech · Seed 2027"),
+     photo (logo under assets/), linkedin (used as the company link). */
+  portfolio: [],
+
   team: [
     {
       name: "Amanda Lai",
