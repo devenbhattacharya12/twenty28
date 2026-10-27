@@ -15,6 +15,12 @@
     window.addEventListener("scroll", mark, { passive: true });
   }
 
+  /* ---- founder form: thank-you after FormSubmit redirects back ---- */
+  if (/[?&]submitted=1/.test(window.location.search)) {
+    var thanks = document.getElementById("thanks");
+    if (thanks) thanks.hidden = false;
+  }
+
   /* ---- people grids ---- */
   function initials(name) {
     return name
