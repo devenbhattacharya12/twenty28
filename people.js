@@ -6,6 +6,7 @@
    zoom     how far to magnify inside the circle. Default 1.
             focus and zoom frame a full-length photo on the face. A tight headshot
             needs neither; delete both lines and it fills the circle as-is.
+   linkedin optional profile URL; omit it and no link renders.
    more     an entry of { more: true } renders the open-slot tile. */
 
 window.PEOPLE = {
@@ -15,8 +16,13 @@ window.PEOPLE = {
 
   team: [
     {
+      name: "Amanda Lai",
+      role: "Class of 2028"
+      /* TODO: add role line, photo (assets/amanda-lai.jpg) and LinkedIn */
+    },
+    {
       name: "Deven Bhattacharya",
-      role: "Class of 2028",
+      role: "COO, HeyTutor (acquired by ESS) · ScOp Venture Capital",
       photo: "assets/deven-bhattacharya.jpg",
       focus: "54% 4%",
       zoom: 2.5,
@@ -24,12 +30,16 @@ window.PEOPLE = {
     },
     {
       name: "Jaymal Lodha",
-      role: "Class of 2028",
+      role: "Sequoia Capital India (now Peak XV) · Bain & Co",
       photo: "assets/jaymal-lodha.jpg",
       focus: "50% 8%",
       zoom: 2.5,
       linkedin: "https://www.linkedin.com/in/jaymal-lodha/"
     },
-    { more: true, name: "More to come", role: "We are bringing on more of the class." }
+    {
+      name: "Zane Sun",
+      role: "Vanderbilt Endowment"
+      /* TODO: add photo (assets/zane-sun.jpg) and LinkedIn */
+    }
   ]
 };
